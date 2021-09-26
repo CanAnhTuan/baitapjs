@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài 1</title>
+</head>
+
+<body>
+    <h2>Bài 1</h2>
+    <hr>
+    <h2>Bài 2</h2>
+    <input type="text" placeholder="nhap vao gia trị" id="x">
+    <input type="button" value="Cộng 1" onclick="cong()">
+    <p id="bai2"></p>
+    <hr>
+    <h2>Bài 3</h2>
+    <input type="number" placeholder="nhap vao gia trị 1" id="a">
+    <input type="number" placeholder="nhap vao gia trị 2" id="b">
+    <input type="button" value="kiểm tra" onclick="tong()">
+    <p id="bai3"></p>
+    <hr>
+    <h2>Bài 6</h2>
+    <input type="text" placeholder="nhap vao gia trị" id="c">
+    <input type="button" value="Bình Phương" onclick="binhphuong()">
+    <p id="bai6"></p>
+    <hr>
+    <h2>Bài 7</h2>
+    <input type="text" placeholder="nhap vao gia trị" id="e">
+    <input type="button" value="Bình Phương" onclick="hinhtron()">
+    <p id="bai61"></p>
+    <p id="bai62"></p>
+    <hr>
+    <h2>Bài 8</h2>
+    <input type="text" placeholder="nhap vao gia trị" id="f">
+    <input type="button" value="Giai Thừa" onclick="giaithua()">
+    <p id="bai8"></p>
+    <hr>
+    <h2>Bài 9</h2>
+    <input type="text" placeholder="nhap vao gia trị" id="g">
+    <input type="button" value="Kiểm tra" onclick="check()">
+    <p id="bai9"></p>
+    <hr>
+    <h2>Bài 10</h2>
+    <input type="text" placeholder="nhap vao gia trị" id="soa">
+    <input type="text" placeholder="nhap vao gia trị" id="sob">
+    <input type="text" placeholder="nhap vao gia trị" id="soc">
+    <input type="button" value="Kiểm tra" onclick="check1()">
+    <p id="bai10"></p>
+    <hr>
+    <h2>Bài 11</h2>
+    <input type="text" placeholder="nhap vao gia trị" id="snd">
+    <input type="button" value="Kiểm tra" onclick="laSoNguyenDuong()">
+    <p id="bai11"></p>
+    <hr>
+    <h2>Bài 13</h2>
+    <input type="text" placeholder="nhap vao gia trị" id="arr">
+    <input type="button" value="Kiểm tra" onclick="daonguoc()">
+    <p id="bai13"></p>
+    <p id="bai131"></p>
+    <hr>
+    <h2>Bài 14</h2>
+    <input type="text" placeholder="nhap vao gia trị mảng" id="mang">
+    <input type="text" placeholder="nhap vao gia trị tìm kiếm" id="tk">
+    <input type="button" value="Kiểm tra" onclick="check12()">
+    <p id="bai14"></p>
+    <p id="bai141"></p>
+    <hr>
+    <h2>Bài 15</h2>
+    <div id="bai15"></div>
+    <script>
+        function bai1() {
+            alert('xin chào');
+        }
+        function cong() {
+            var x1 = document.getElementById('x').value;
+            x1 = parseFloat(x1);
+            var kq2 = x1 + 1;
+            document.querySelector('#bai2').innerHTML = ('Tổng là ' + kq2);
+            console.log(typeof x1)
+            console.log(parseInt(x1))
+            console.log(typeof kq2)
+
+        }
+        function tong() {
+            var a1 = document.getElementById('a').value;
+            var b1 = document.getElementById('b').value;
+            a1 = parseFloat(a1);
+            b1 = parseFloat(b1)
+            if (a.value > b.value) {
+                document.querySelector('#bai3').innerHTML = ('giá trị 1 là ' + a1 + ' lớn hơn giá trị 2 là ' + b1);
+            }
+            else {
+                document.querySelector('#bai3').innerHTML = ('tổng của 2 số là : ' + (a1 + b1));
+            }
+        }
+        function binhphuong() {
+            var c1 = document.getElementById('c').value;
+            c1 = parseFloat(c1);
+            var kq6 = c1 * c1;
+            document.querySelector('#bai6').innerHTML = ('Tổng là ' + kq6);
+        }
+        function hinhtron() {
+            var e1 = document.getElementById('e').value;
+            e1 = parseFloat(e1);
+            var s = e1 * e1 * 3.14;
+            var cv = (e1 * 2 * e1 * 2 * 3.14) / 4
+            document.querySelector('#bai61').innerHTML = ('diện tích  là ' + s);
+            document.querySelector('#bai62').innerHTML = ('chu vi là ' + cv);
+        }
+        function giaithua() {
+            var f1 = document.getElementById('f').value;
+            f1 = parseFloat(f1);
+            var giaithua = 1;
+            for (var i = 1; i <= f1; i++) {
+                giaithua *= i
+            }
+            document.querySelector('#bai8').innerHTML = ('Giai Thua bang ' + giaithua)
+        }
+        function check() {
+
+            if (isNaN(g.value)) {
+                document.querySelector('#bai9').innerHTML = ('False :Kí tự bạn nhập không phải là số');
+            }
+            else {
+                document.querySelector('#bai9').innerHTML = ('True');
+            }
+        }
+        function check1() {
+            var so1 = document.getElementById('soa').value;
+            var so2 = document.getElementById('sob').value;
+            var so3 = document.getElementById('soc').value;
+            if (soa.value > soc.value && sob.value > soc.value) {
+                document.querySelector('#bai10').innerHTML = ('Số bé nhất là số : ' + so3);
+            }
+            else if (sob.value < soc.value && sob.value < soa.value) {
+                document.querySelector('#bai10').innerHTML = ('Số bé nhất là số : ' + so2);
+            }
+            else if (soc.value > soa.value && soa.value < soc.value) {
+                document.querySelector('#bai10').innerHTML = ('Số bé nhất là số : ' + so1);
+            }
+        }
+        function laSoNguyenDuong() {
+            var snd1 = document.getElementById('snd').value;
+            if (snd.value % 1 == 0 && snd.value > 0) {
+                document.querySelector('#bai11').innerHTML = ('True' + snd1 + ' là số nguyên dương');
+            }
+            else {
+                document.querySelector('#bai11').innerHTML = ('False' + snd1 + ' không phải là số nguyên dương');
+            }
+        }
+        function daonguoc() {
+            var org_arr = document.getElementById('arr').value;
+            let new_arr = [];
+            for (let i = org_arr.length - 1; i >= 0; i--) {
+                new_arr.push(org_arr[i]);
+                document.querySelector('#bai13').innerHTML = ('mảng cũ là : ' + org_arr);
+                document.querySelector('#bai131').innerHTML = ('mảng sau khi được đảo là : ' + new_arr);
+            }
+        }
+        function check12() {
+            var tk1 = document.getElementById('tk').value;
+
+
+            const b = document.getElementById('mang').value;;
+            if (b.includes(tk1)) {
+                document.querySelector('#bai14').innerHTML = (tk1 + " is in the array");
+                let reg = new RegExp(tk1, "g");
+                let count = (b.match(reg) || []).length;
+                document.querySelector('#bai141').innerHTML = (" Xuất hiện " + count + " lần");
+            }
+            else {
+                document.querySelector('#bai14')=(tk1 + " is not in the array")
+            }
+        }
+
+        bai1();
+    </script>
+</body>
+
+</html>

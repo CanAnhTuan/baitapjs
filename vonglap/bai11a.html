@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài 11</title>
+</head>
+
+<body>
+    <h1>in hình trái tim</h1>
+    <script>
+let str = "I love you and our son";
+let count = (str.match(/p/g) || []).length;
+if(count > 0){
+    console.log(count);
+}
+else{
+    console.log( '-1');
+}
+
+        // var a, b, size = 15;
+
+        // /* FOR THE APEX OF HEART */
+        // for (a = parseInt(size / 2); a <= size; a = a + 2) {
+
+        //     // FOR SPACE BEFORE PEAK-1 : PART 1
+        //     for (b = 1; b < size - a; b = b + 2)
+        //         document.write(" ");
+
+        //     // FOR PRINTING PEAK-1 : PART 2
+        //     for (b = 1; b <= a; b++)
+        //         document.write("A");
+
+        //     // FOR SPACE B/W PEAK-1 AND PEAK-2 : PART 3
+        //     for (b = 1; b <= size - a; b++)
+        //         document.write(" ");
+
+        //     // FOR PRINTING PEAK-2 : PART 4
+        //     for (b = 1; b <= a - 1; b++)
+        //         document.write("A");
+
+        //     document.write("<br>");
+        // }
+
+        // /*FOR THE BASE OF HEART ie. THE INVERTED TRIANGLE */
+
+        // for (a = size; a >= 0; a--) {
+
+        //     // FOR SPACE BEFORE THE INVERTED TRIANGLE : PART 5
+        //     for (b = a; b < size; b++)
+        //         document.write(" ");
+
+        //     // FOR PRINTING THE BASE OF TRIANGLE : PART 6
+        //     for (b = 1; b <= ((a * 2) - 1); b++)
+        //         document.write("B");
+
+        //     document.write("<br>");
+        // }
+
+
+    </script>
+</body>
+
+</html>

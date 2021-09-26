@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài 10</title>
+</head>
+
+<body>
+    <h1>Tính diện tích hình vuông khi biết cạnh a.</h1>
+    <hr>
+    <h2> Kết quả</h2>
+    <div class="show">
+            
+    </div>
+    <div class="not-show"></div>
+    <script>
+     var a = prompt(" Nhập vào cạnh của hình vuông:")
+     var b = a * a;
+     var c = a * 4;
+     if (a <= 0) {
+      document.write(" Giá trị bạn nhập không đúng vì cạnh hình vuông không thể nhỏ hơn 0 vui lòng nhập lại !");
+    } else{
+      document.querySelector('.show').innerHTML = ("\r\nDiện tích của hình vuông với cạnh = " + a + " là : " + b);
+      document.querySelector('.not-show').innerHTML =("\r\nChu vi của hình vuông với cạnh = " + a + " là : " + c);
+    }
+  </script>
+</body>
+
+</html>

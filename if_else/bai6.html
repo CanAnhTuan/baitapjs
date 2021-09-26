@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài 6</title>
+</head>
+<body>
+    
+    <h1> Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng</h1>
+    <p>- các mặt hàng.<br>
+        + nước ngọt.<br>
+        + bia<br>
+        + rượu<br>
+    - giá cả mặt hàng.<br>
+        + 10000/nước ngọt.<br>
+        + 20000/bia.<br>
+        + 30000/rượu.<br>
+    - doanh thu của mặt hàng.<br>
+        % 1 sản phẩm: 5%.</p>
+    <script>
+        var nuocngot = prompt(" nhập vào số lượng nước ngọt đã bán trong ngày");
+        var bia = prompt(" nhập vào số lượng bia đã bán trong ngày");
+        var ruou =  prompt(" nhập vào số lượng rượu đã bán trong ngày");
+        doanhthu =(Number(nuocngot*10000) + Number(20000*bia) + Number(30000*ruou));
+        hoahong = (doanhthu * 5)/100;
+        document.write(" Doanh thu của ngày hôm nay là : " + doanhthu + " VNĐ");
+        document.write("\n");
+        document.write(" Hoa Hồng của ngày hôm nay là : " + hoahong + " VNĐ");
+    </script>
+
+</body>
+</html>

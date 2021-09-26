@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài 11</title>
+</head>
+
+<body>
+    <h1>Tính diện tích hình chữ nhật khi biết 02 cạnh a, b.</h1>
+    <form action="">
+        <label> Cạnh A</label>
+        <input type="text" id="a" placeholder="nhập vào giá trị a"></br>
+        <label> Cạnh B</label>
+        <input type="text" id="b" placeholder="nhập vào giá trị b"></br>
+        <input type="button" value="Tính" id="submit" onclick="Tinh()"/>    
+        <input type="button" onclick="reset()" value="Reset form">
+        <p> kết quả:</p>
+       <div id="kq"></div>
+    </form>
+    <script>
+        function Tinh() {
+            var x = document.getElementById('a').value;
+            var y = document.getElementById('b').value;
+            x = parseFloat(x); //2. chuyển kiểu dữ liệu về dạng số
+            y = parseFloat(y);
+            var dientich = x * y;
+            document.querySelector('#kq').innerHTML = dientich;
+            // document.write(dientich);
+        }
+        function reset() {
+            document.getElementById("reset").reset();
+        }
+      
+    </script>
+</body>
+
+</html>

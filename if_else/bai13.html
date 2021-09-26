@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài 13</title>
+    <style>
+        #main {
+            width: 800px;
+            height: 500px;
+            margin: 0 auto;
+
+        }
+
+        .text {
+            width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            padding-right: 50px;
+        }
+
+        input {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .reset {
+            margin-left: 55px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <h1 align="center">Giải phương trình bậc 1.</h1>
+        <form action="bai13.html" class="text">
+            <label> Số A</label>
+            <input type="text" id="a" placeholder="nhập vào giá trị a"></br>
+            <label> Số B</label>
+            <input type="text" id="b" placeholder="nhập vào giá trị b"></br>
+            <input type="button" value="Tính" id="submit" onclick="Tinh()" />
+            <input type="button" onclick="reset()" value="Reset form" class="reset">
+            <br>
+            <label> kết quả:</label> <label id="kq"></label>
+        </form>
+    </div>
+    <script>
+        function Tinh() {
+            var x = document.getElementById('a').value;
+            var y = document.getElementById('b').value;
+            x = parseFloat(x);
+            y = parseFloat(y);
+            if (a.value == '' && b.value == '') {
+                alert('Bạn đã nhập thiếu giá trị vào ô nhập liệu');
+            }
+            else if (isNaN(a.value) && isNaN(b.value)) {
+                alert('Kí tự bạn nhập không phải là số');
+            }
+            else if (a.value == '') {
+                alert('Bạn đã nhập thiếu giá trị ô nhập liệu thứ 1');
+            }
+            else if (isNaN(a.value)) {
+                alert('Kí tự bạn nhập ở ô đầu tiên không phải là số');
+            }
+            else if (isNaN(b.value)) {
+                alert('Kí tự bạn nhập ở ô thứ hai không phải là số');
+            }
+            else if (b.value == '') {
+                alert('Bạn đã nhập thiếu giá trị ô nhập liệu thứ 2');
+            }
+            var c = y / x;
+            document.querySelector('#kq').innerHTML = c;
+        }
+        function reset() {
+            document.getElementById("reset").reset();
+            this.reset = this.kq;
+        }
+    </script>
+</body>
+
+</html>

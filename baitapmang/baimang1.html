@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài mảng 1 </title>
+</head>
+
+<body>
+    <h1>
+        Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử. <br>
+        Chương trình thực hiện tính và hiển thị xem có bao nhiêu số nguyên lớn hơn hoặc bằng 10.
+    </h1>
+    <script>
+        function filterRangeInPlace(arr, a, b) {
+
+            for (let i = 0; i < arr.length; i++) {
+                let val = arr[i];
+                if (val < a || val > b) {
+                    arr.splice(i, 1);
+                    i--;
+                }
+            }
+
+        }
+
+        let arr = [5, 3, 8, 1, 2, 4, 6, 7, 50, 80, 90, 98, 55, 56, 54, 52, 57, 35, 45, 10, 11];
+        alert("các phần tử có trong mảng  là : " + arr);
+        filterRangeInPlace(arr, 10, 100);
+        alert("các phần tử lớn hơn hoặc bằng 10 là : " + arr);
+    </script>
+</body>
+
+</html>

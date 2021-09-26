@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = prompt(' nhap vao chu can dem : ');
+        function Dem(str) {
+            return str.split(" ").length;
+        }
+        document.write('số từ có trong mảng bạn vừa nhập là : ' + Dem(a) + '<br>');
+        let org_arr = ['c', 's', 'c', '2', '6', '1'];
+        let new_arr = [];
+
+        for (let i = org_arr.length - 1; i >= 0; i--) {
+            new_arr.push(org_arr[i]);
+        }
+
+        document.write('mảng cũ là : ' + org_arr + '<br>');
+        document.write('mảng sau khi được đảo là : ' + new_arr);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Xếp hạng học lực của học sinh dựa trên các (điểm bài kiểm tra, 2xđiểm thi giữa kỳ, 3xđiểm thi cuối kỳ) /5 -->
+    <script>
+        var a = prompt("nhập vào điểm kiểm tra");
+        var b = prompt("nhập vào điểm thi giữa kỳ");
+        var c = prompt("nhập vào điểm thi cuối kỳ");
+        d=(parseFloat(a) + parseFloat(2*b) + parseFloat(3*c))/5;
+        
+        if(d >= 8){
+            document.write(" Bạn được " + d + " điểm và đạt học sinh giỏi.");
+        }
+            else if(d >= 6.5){
+                document.write(" Bạn được " + d + " điểm và đạt học sinh khá.");
+            }
+                else if(d >= 5 ){
+                    document.write(" Bạn được " + d + " điểm và đạt học sinh trung bình.");
+                }
+                    else{
+                        document.write(" Bạn được " + d + " điểm và đạt học sinh yếu.");
+                    }
+    </script>
+    
+</body>
+</html>

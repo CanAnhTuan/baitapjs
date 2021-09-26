@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label>Đổi từ feet sang meters</label>
+    <input type="number" id="feet" placeholder=" nhập vào giá trị feet muốn đổi">
+    <input type="button" onclick="doisangmet()" value="kiểm tra"><br>
+    <p id="meters"></p>
+    <hr>
+    <label>Đổi từ meters sang feet</label>
+    <input type="number" id="met" placeholder=" nhập vào giá trị foot muốn đổi">
+    <input type="button" onclick="doisangfeet()" value="kiểm tra"><br>
+    <p id="fet"></p>
+    <script>
+        function doisangmet() {
+            var a = document.getElementById('feet').value;
+            a = parseFloat(a);
+            var kqmet = a * 0.305;
+            document.querySelector("#meters").innerHTML = ("giá trị sau khi được đổi sang met là : " + kqmet);
+
+        }
+        function doisangfeet() {
+            var n = document.getElementById('met').value;
+            n = parseFloat(n);
+            var kqfet = n * 3.279;
+            document.querySelector("#fet").innerHTML = ("giá trị sau khi được đổi sang foot là : " + kqfet);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài 19</title>
+    <style>
+        #main {
+            width: 800px;
+            height: 500px;
+            margin: 0 auto;
+
+        }
+
+        .text {
+            width: 600px;
+            margin: 0 auto;
+        }
+
+        label {
+            padding-right: 50px;
+        }
+
+        input {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .reset {
+            margin-left: 55px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <h1 align="center">Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lãi con).</h1>
+        <form action="bai13.html" class="text" align="center">
+            <p>khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng.</p>
+            <label> Số tiền vay ban đầu : </label>
+            <input type="text" id="a" placeholder="nhập vào giá trị a"></br>
+            <label>nhập vào số tiền . Ví dụ 5.000.000 VNĐ thì nhập vào 5 </label><br>
+            <label> Số tháng vay :</label>
+            <input type="text" id="b" placeholder="nhập vào giá trị b">
+            </br>
+            <input type="button" value="Tính" id="submit" onclick="Tinh()" />
+            <input type="button" onclick="resetForm()" value="Reset form" class="reset">
+            <br>
+            <label> kết quả:</label>
+            <br> <br> <label id="so"></label>
+            <br> <br> <label id="thang"></label>
+            <br> <br> <label id="phantram"></label>
+            <br><br> <label id="kq"></label>
+    </div>
+    <script>
+        function Tinh() {
+            var x = document.getElementById('a').value;
+            var y = document.getElementById('b').value;
+            x = parseFloat(x);
+            y = parseFloat(y);
+            if (a.value == '' && b.value == '') {
+                alert('Bạn đã nhập thiếu giá trị vào ô nhập liệu');
+            }
+            else if (isNaN(a.value) && isNaN(b.value)) {
+                alert('Kí tự bạn nhập không phải là số');
+            }
+            else if (a <= 0 && b <= 0) {
+                alert('vui lòng nhập lại giá trị lớn hơn 0');
+            }
+            else if (a.value == '') {
+                alert('Bạn đã nhập thiếu giá trị ô nhập liệu thứ 1');
+            }
+            else if (a.value <= 0) {
+                alert('vui lòng nhập lại giá trị lớn hơn 0 ở ô thứ 1');
+            }
+            else if (isNaN(a.value)) {
+                alert('Kí tự bạn nhập ở ô đầu tiên không phải là số');
+            }
+            else if (isNaN(b.value)) {
+                alert('Kí tự bạn nhập ở ô thứ hai không phải là số');
+            }
+            else if (b.value == '') {
+                alert('Bạn đã nhập thiếu giá trị ô nhập liệu thứ 2');
+            }
+            else if (b.value <= 0) {
+                alert('vui lòng nhập lại giá trị lớn hơn 0 ở ô thứ 2');
+            }
+            else if (a.value < 500 && b.value <= 6) {
+                var lai6tduoi5 = 4;
+                var thang6duoi5 = (x * lai6tduoi5) / 100;
+                document.querySelector('#so').innerHTML = (" Số tiền bạn vay là : " + x + "000000 VNĐ.");
+                document.querySelector('#thang').innerHTML = (" Số tháng bạn vay là : " + y + " tháng.");
+                document.querySelector('#phantram').innerHTML = (" Mức lãi bạn phải chịu là : " + lai6tduoi5 + " % trong 1 năm.");
+                document.querySelector('#kq').innerHTML = (" Số tiền bạn phải đóng là : " + thang6duoi5 + " triệu VNĐ.");
+            }
+            else if (a.value < 500 && b.value <= 12) {
+                var lai12tduoi5 = 4.5;
+                var thang12duoi5 = (x * lai12tduoi5) / 100;
+                document.querySelector('#so').innerHTML = (" Số tiền bạn vay là : " + x + "000000 VNĐ.");
+                document.querySelector('#thang').innerHTML = (" Số tháng bạn vay là : " + y + " tháng.");
+                document.querySelector('#phantram').innerHTML = (" Mức lãi bạn phải chịu là : " + lai12tduoi5 + " % trong 1 năm.");
+                document.querySelector('#kq').innerHTML = (" Số tiền bạn phải đóng là : " + thang12duoi5 + " triệu VNĐ.");
+            }
+            else if (a.value < 500 && b.value <= 24) {
+                var lai24tduoi5 = 5;
+                var thang24duoi5 = (x * lai24tduoi5) / 100;
+                document.querySelector('#so').innerHTML = (" Số tiền bạn vay là : " + x + "000000 VNĐ.");
+                document.querySelector('#thang').innerHTML = (" Số tháng bạn vay là : " + y + " tháng.");
+                document.querySelector('#phantram').innerHTML = (" Mức lãi bạn phải chịu là : " + lai24tduoi5 + " % trong 1 năm.");
+                document.querySelector('#kq').innerHTML = (" Số tiền bạn phải đóng là : " + thang24duoi5 + " triệu VNĐ.");
+            }
+            else if (a.value < 500 && b.value > 24) {
+                var laihon24tcua5 = 5.5;
+                var thanghon24cua5 = (x * laihon24tcua5) / 100;
+                document.querySelector('#so').innerHTML = (" Số tiền bạn vay là : " + x + "000000 VNĐ.");
+                document.querySelector('#thang').innerHTML = (" Số tháng bạn vay là : " + y + " tháng.");
+                document.querySelector('#phantram').innerHTML = (" Mức lãi bạn phải chịu là : " + laihon24tcua5 + " % trong 1 năm.");
+                document.querySelector('#kq').innerHTML = (" Số tiền bạn phải đóng là : " + thanghon24cua5 + " triệu VNĐ.");
+            }
+            else if (a.value >= 500 && b.value <= 6) {
+                var lai6t = 6.75;
+                var sauthang = (x * lai6t) / 100;
+                document.querySelector('#so').innerHTML = (" Số tiền bạn vay là : " + x + "000000 VNĐ.");
+                document.querySelector('#thang').innerHTML = (" Số tháng bạn vay là : " + y + " tháng.");
+                document.querySelector('#phantram').innerHTML = (" Mức lãi bạn phải chịu là : " + lai6t + " % trong 1 năm.");
+                document.querySelector('#kq').innerHTML = (" Số tiền bạn phải đóng là : " + sauthang + " triệu VNĐ.");
+            }
+            else if (a.value >= 500 && b.value <= 12) {
+                var lai12t = 7.75;
+                var thang12 = (x * lai12t) / 100;
+                document.querySelector('#so').innerHTML = (" Số tiền bạn vay là : " + x + "000000 VNĐ.");
+                document.querySelector('#thang').innerHTML = (" Số tháng bạn vay là : " + y + " tháng.");
+                document.querySelector('#phantram').innerHTML = (" Mức lãi bạn phải chịu là : " + lai12t + " % trong 1 năm.");
+                document.querySelector('#kq').innerHTML = (" Số tiền bạn phải đóng là : " + thang12 + " triệu VNĐ.");
+            }
+            else if (a.value >= 500 && b.value <= 24) {
+                var lai24t = 8;
+                var thang24 = (x * lai24t) / 100;
+                document.querySelector('#so').innerHTML = (" Số tiền bạn vay là : " + x + "000000 VNĐ.");
+                document.querySelector('#thang').innerHTML = (" Số tháng bạn vay là : " + y + " tháng.");
+                document.querySelector('#phantram').innerHTML = (" Mức lãi bạn phải chịu là : " + lai24t + " % trong 1 năm.");
+                document.querySelector('#kq').innerHTML = (" Số tiền bạn phải đóng là : " + thang24 + " triệu VNĐ.");
+            }
+            else if (a.value > 500 && b.value > 24) {
+                var laihon24t = 5.5;
+                var thanghon24 = (x * laihon24t) / 100;
+                document.querySelector('#so').innerHTML = (" Số tiền bạn vay là : " + x + "000000 VNĐ.");
+                document.querySelector('#thang').innerHTML = (" Số tháng bạn vay là : " + y + " tháng.");
+                document.querySelector('#phantram').innerHTML = (" Mức lãi bạn phải chịu là : " + laihon24t + " % trong 1 năm.");
+                document.querySelector('#kq').innerHTML = (" Số tiền bạn phải đóng là : " + thanghon24 + " triệu VNĐ.");
+            }
+        }
+
+        function resetForm() {
+            document.getElementById("a").value = null;
+            document.getElementById("b").value = null;
+            document.querySelector('#so').innerHTML = ("");
+            document.querySelector('#kq').innerHTML = ("");
+            document.querySelector('#thang').innerHTML = ("");
+            document.querySelector('#phantram').innerHTML = ("");
+        }
+    </script>
+</body>
+
+</html>

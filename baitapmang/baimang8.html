@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <p id="demo1"></p>
+    <p id="demo11"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+    <script>
+
+        var score = [40, 100, 1, 6, 35, 10, 22, 33, 44, 11];
+        var score1 = [7, 55, 90, 45, 67, 70, 80, 90, 95, 99];
+        let a = [
+            [1, 2, 1, 24],
+            [8, 11, 9, 4],
+            [7, 0, 7, 27],
+            [7, 4, 28, 14],
+            [3, 10, 26, 7]
+        ];
+        document.write(a[0][0]+'<br>'); // 1
+        document.write(a[0][1]+'<br>'); // 2
+        document.write(a[0][2]+'<br>'); // 3
+        document.write(a[0][3]+'<br>'); // 4
+        document.write(a);
+        var c = score.concat(score1);
+        score.sort(function (a, b) { return b - a });
+        document.getElementById("demo2").innerHTML = ("mảng sau khi đc sắp xếp theo thứ tự giảm dần là : " + score);
+        document.getElementById("demo1").innerHTML = ('mảng  đc khởi tạo là : ' + score);
+        document.getElementById("demo11").innerHTML = ('mảng  đc khởi tạo là : ' + score1);
+
+        document.getElementById("demo3").innerHTML = ("mảng sau khi đc nối : " + c);
+    </script>
+
+</body>
+
+</html>

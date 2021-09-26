@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài 2</title>
+</head>
+
+<body>
+    <h1> Sử dụng hàm prompt() để lấy thông tin nhiệt độ hiện tại được nhập bởi người truy cập.<br>
+        Nếu nhiệt độ nhập vào trên 100, yêu cầu người dùng giảm nhiệt độ.<br>
+        Nếu nhiệt độ dưới 20, yêu cầu người dùng tăng nhiệt độ.</h1>
+    <p id="for"></p>
+    <p id="while"></p>
+    <script>
+        var a = prompt('nhập vào nhiệt độ của bạn hiện tại (for)');
+        var b = prompt('nhập vào nhiệt độ của bạn hiện tại (while)');
+        for ( var i = a; i <= 200; i++) {
+            if (i > 100) {
+                alert('Nhiệt độ của bạn đang quá cao vui lòng hạ nhiệt độ xuống ! ');
+                document.querySelector('#for').innerHTML = i;
+                break;
+            }
+            else if (i < 20) {
+                alert('Nhiệt độ của bạn đang quá thấp vui lòng tăng nhiệt độ lên ! ');
+                document.querySelector('#for').innerHTML = i;
+                break;
+            }
+            else{
+                alert('Nhiệt độ của bạn là  ' + i);
+                document.querySelector('#for').innerHTML = i;
+                break;
+            }
+        }
+        while ( j = b) {
+            if (j > 100) {
+                alert('Nhiệt độ của bạn đang quá cao vui lòng hạ nhiệt độ xuống ! ');
+                document.querySelector('#while').innerHTML = j;
+                break;
+            }
+            else if (j < 20) {
+                alert('Nhiệt độ của bạn đang quá thấp vui lòng tăng nhiệt độ lên ! ');
+                document.querySelector('#while').innerHTML = j;
+                break;
+            }
+            else{
+                alert('Nhiệt độ của bạn là  ' + j);
+                document.querySelector('#while').innerHTML = j;
+                break;
+            }
+            j++;
+        }
+    </script>
+</body>
+
+</html>

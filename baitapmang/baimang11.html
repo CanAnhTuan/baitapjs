@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài 3</title>
+</head>
+
+<body>
+    <script>
+        function fibonacci() {
+            var f0 = prompt("nhap f0");
+            var f1 = prompt("nhap f1");
+            var fibo = [];
+            var huy = [];
+            var so = new Array();
+
+            for (var i = 2; i < 20; i++) {
+                so[0] = Number(f0);
+                so[1] = Number(f1);
+                so[i] = so[i - 1] + so[i - 2];
+                // console.log(so[i]);
+
+                fibo = fibo.concat(so[i]);
+            }
+            console.log(fibo);
+            // console.log("fibo: ",fibo);
+            for (let j = 0; j < fibo.length; ++j) {
+                // console.log("huy: ", fibo[j]);
+                if (fibo[j] % 5 == 0) {
+                    const a = []
+                    a.push(fibo[j])
+                    console.log(a);
+                    break;
+                }
+            }
+            document.write('Số đầu tiên trong dãy chia hết cho 5 là : '+ Number(a)+'<br>');
+            document.write(' Dãy số fibonacci : ' + String(f0) + ' ,' + String(f1) + ' ,' + fibo);
+
+
+        }
+        fibonacci();
+    </script>
+</body>
+
+</html>

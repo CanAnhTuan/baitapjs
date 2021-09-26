@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài 17</title>
+    <style>
+        #main {
+            width: 800px;
+            height: 500px;
+            margin: 0 auto;
+
+        }
+
+        .text {
+            width: 600px;
+            margin: 0 auto;
+        }
+
+        label {
+            padding-right: 50px;
+        }
+
+        input {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .reset {
+            margin-left: 55px;
+        }
+        .dongia{
+            margin-left: 50px;
+        }
+        .abc{
+            margin-left: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <h1 align="center">Viết chương trình tính giá điện.</h1>
+        <form action="bai13.html" class="text" align="center">
+            <label> Số Kw trên đồng hồ tháng trước:</label>
+            <input type="text" id="a" placeholder="nhập vào giá trị a"></br>
+            <label> Số Kw trên đồng hồ  tháng này :</label>
+            <input type="text" id="b" placeholder="nhập vào giá trị b"></br>
+            <label class="abc"> Đơn giá :</label> <label class="dongia"> 3000 VND/ 1 Kw điện</label>
+            </br>
+            <input type="button" value="Tính" id="submit" onclick="Tinh()" />
+            <input type="button" onclick="resetForm()" value="Reset form" class="reset">
+            <br>
+            <label> kết quả:</label>
+            <br> <br> <label id="soKw"></label>
+            <br><br> <label id="kq"></label>
+        </form>
+    </div>
+    <script>
+        function Tinh() {
+            var x = document.getElementById('a').value;
+            var y = document.getElementById('b').value;
+            var z  = y - x;
+            var thanhtien = z * 3000;
+            if (a.value == '' && b.value == '') {
+                alert('Bạn đã nhập thiếu giá trị vào ô nhập liệu');
+            }
+            else if (isNaN(a.value) && isNaN(b.value)){
+                alert('Kí tự bạn nhập không phải là số');
+            }
+            else if (a <= 0 && b <= 0) {
+                alert('vui lòng nhập lại giá trị lớn hơn 0');
+            }
+            else if (a.value == '') {
+                alert('Bạn đã nhập thiếu giá trị ô nhập liệu thứ 1');
+            }
+            else if (a.value <= 0) {
+                alert('vui lòng nhập lại giá trị lớn hơn 0 ở ô thứ 1');
+            }
+            else if (isNaN(a.value)) {
+                alert('Kí tự bạn nhập ở ô đầu tiên không phải là số');
+            }
+            else if (isNaN(b.value)) {
+                alert('Kí tự bạn nhập ở ô thứ hai không phải là số');
+            }
+            else if (b.value == '') {
+                alert('Bạn đã nhập thiếu giá trị ô nhập liệu thứ 2');
+            }
+            else if (b.value <= 0) {
+                alert('vui lòng nhập lại giá trị lớn hơn 0 ở ô thứ 2');
+            }
+            else if( z < 0){
+                document.querySelector('#kq').innerHTML = (" Số  Kw bạn vừa nhập ở tháng này bé hơn của tháng trước.Vui lòng nhập lại !");
+            }
+            else{
+                document.querySelector('#soKw').innerHTML = ("Số điện tháng này là : " + z + "Kw");
+                document.querySelector('#kq').innerHTML = ("Thành tiền: " + thanhtien + "VNĐ");
+            }
+
+        }
+
+        function resetForm() {
+            document.getElementById("a").value = null
+            document.getElementById("b").value = null
+            document.querySelector('#soKw').innerHTML = ("");
+            document.querySelector('#kq').innerHTML = ("");
+            
+        }
+    </script>
+</body>
+
+</html>

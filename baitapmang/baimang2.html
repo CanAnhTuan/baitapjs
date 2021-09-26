@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài mảng 2 </title>
+</head>
+
+<body>
+    <h1>
+        Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử. <br>
+        Chương trình thực hiện tính và hiển thị xem có bao nhiêu số nguyên lớn hơn hoặc bằng 10. <br>
+        hiển thị ra được phần tử có giá trị lớn nhất trong mảng và vị trí của phần tử đó. <br>
+        In ra giá trị trung bình của các phần tử trong mảng. <br>
+        đảo ngược các phần tử trong mảng đó.
+    </h1>
+    <script>
+
+        let arr = [5, 3, 6, 7, 10, 80, 90, 98, 55, 45];
+        document.write("các phần tử có trong mảng  là : " + arr + '<br>');
+        function lonhon10(arr, a, b) {
+
+            for (let i = 0; i < arr.length; i++) {
+                let val = arr[i];
+                if (val < a || val > b) {
+                    arr.splice(i, 1);
+                    i--;
+                }
+            }
+
+        }
+        lonhon10(arr, 10, 100);
+        document.write('các sô lớn hơn hoặc bằng 10 là :' + arr + '<br>');
+        var maxInNumbers = Math.max.apply(Math, arr);
+        document.write("Giá trị lớn nhất là " + maxInNumbers + "<br/>");
+        var ketqua = arr.indexOf(maxInNumbers);
+        document.write("vị trí của nó là " + ketqua + "<br/>");
+        var sum = 0;
+        for (var i = 0; i < arr.length; i++) {
+            sum += parseInt(arr[i], 10);
+        }
+        var avg = sum / arr.length;
+        last = avg.toFixed(2);
+
+        document.write("Tổng của tất cả các phần tử là : " + sum + '<br>' + " giá trị trung bình của các phần tử trong mảng là : " + avg + '<br>');
+        document.write(' giá trị sau khi đã làm tròn là : ' + last + '<br>');
+        arr.reverse();
+        document.write(' mảng sau khi đc đảo chiều là : ' + arr + '<br>');
+    </script>
+</body>
+
+</html>

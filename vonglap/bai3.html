@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài 3</title>
+</head>
+
+<body>
+    <script>
+        function fibonacci(mang) {
+            var f0 = prompt("nhap f0");
+            var f1 = prompt("nhap f1");
+            var fibo = [];
+            var so = new Array();
+            var tong = 0;
+            const Chia5 = []
+            var checkKQ = true
+            for (var i = 2; i < 20; i++) {
+                so[0] = Number(f0);
+                so[1] = Number(f1);
+                so[i] = so[i - 1] + so[i - 2];
+                fibo = fibo.concat(so[i]);
+                if (so[i] % 5 == 0 && checkKQ) {
+
+                    Chia5.push(so[i])
+
+                    checkKQ = false
+                }
+            }
+            //
+            var sum = fibo.reduce(function (a, b) { return a + b; }, 0);
+            document.write(' Dãy số fibonacci : ' + String(f0) + ' ,' + String(f1) + ' ,' + fibo, "<br>");
+            document.write('Tổng 20 số của dãy : ', sum, "<br>");
+            document.write('Số đầu tiên trong dãy chia hết cho 5 : ', Chia5);
+        }
+
+        fibonacci();
+    </script>
+</body>
+
+</html>

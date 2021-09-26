@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài 7</title>
+</head>
+<body>
+    <h1>Tính cước điện thoại cho một hộ gia đình với các thông số đã cho</h1>
+    <p>Phí thuê bao bắt buộc là 25 nghìn.<br>
+        600 đồng cho mỗi gọi của 50 phút đầu tiên.<br>
+        400 đồng cho mỗi phút gọi của 150 phút tiếp theo.<br>
+        200 đồng cho bất kỳ mỗi phút nào sau 200 phút đầu tiên.<br>
+        Đầu vào: Một số nguyên duy nhất là số phút gọi<br>
+        Đầu ra: Dòng chữ: “So tien = x”, với x là số tiền phải trả.</p>
+        <hr>
+        <h2>Kết quả</h2>
+    <script>
+        var a = prompt("Nhâp vào só phút gọi");
+        var b = 25000;
+        if(a > 50){
+            var c = b + ( a * 600);
+            document.write("Tổng số tiền bạn phải tra cho " + a + " phút gọi là : " + c + " VNĐ .Phí đã bao gồm cả phí thuê bao bắt buộc là : " + b + " VNĐ");
+        }else if(a > 150){
+            var c = b + ( a * 400);
+            document.write("Tổng số tiền bạn phải tra cho " + a + " phút gọi là : " + c + " VNĐ .Phí đã bao gồm cả phí thuê bao bắt buộc là : " + b + " VNĐ");
+        }else if(a > 200){
+            var c = b + ( a * 200);
+            document.write("Tổng số tiền bạn phải tra cho " + a + " phút gọi là : " + c + " VNĐ .Phí đã bao gồm cả phí thuê bao bắt buộc là : " + b + " VNĐ");
+        }
+    </script>
+</body>
+</html>
