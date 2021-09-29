@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../huongdoituong/showTT.html">
+    <title>Document</title>
+    <style>
+        #main {
+            height: auto;
+            width: 100%;
+            float: left;
+        }
+
+        #TT_Show {
+            width: 25%;
+            float: left;
+        }
+
+        #catchMouse {
+            width: 25%;
+            float: left;
+
+        }
+
+        #EathMouse {
+            width: 25%;
+            float: left;
+
+        }
+
+        #MouseShow {
+            width: 25%;
+            float: left;
+
+        }
+
+        #ArrestedMouse {
+            width: 25%;
+            float: left;
+        }
+
+        #game {
+            margin-top: 30px;
+            width: 100%;
+            height: 500px;
+            border: solid 1px blue;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 align="center"> Phát triển ứng dụng mô phỏng lại quá trình mèo bắt chuột và ăn chuột</h1>
+    <div id="main">
+        <div id="TT_Show">
+            <button type="button" onclick="location.href='../huongdoituong/showTT.html'" style="
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            margin-left: 70px;">Thông tin chung</button>
+        </div>
+        <div id="catchMouse">
+            <button type="button" onclick="eatMouse()" style="
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            margin-left: 95px;">Bắt Chuột</button>
+        </div>
+        <div id="EathMouse">
+            <button type="button" onclick="eatMouse()" style="
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            margin-left: 95px;">Ăn Chuột</button>
+        </div>
+        <div id="EathMouse">
+            <button type="button" onclick="eatMouse()" style="
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            margin-left: 80px;">Số Chuột đã bắt</button>
+        </div>
+    </div>
+    <div id="game">
+
+    </div>
+    <!-- <script src="../huongdoituong/pikachu.png"></script> -->
+    <script src="../huongdoituong/baitap3.js"></script>
+</body>
+
+</html>

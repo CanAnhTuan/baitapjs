@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Phát triển ứng dụng mô phỏng lại quá trình mèo bắt chuột và ăn chuột</title>
+</head>
+
+<body>
+
+    <script>
+        //ClassMouse.
+        var Mouse = function (name, mouseweight, mousespeed, mouselife) {
+            //Thuoc Tinh.
+
+            this.Name = name;
+            this.mouseweight = mouseweight;
+            this.MouseSpeed = mousespeed;
+            this.mouselife = mouselife;
+
+
+            // Mouse said
+
+            this.MouseSaid = function () {
+                alert("  Chuột Kêu : chitchit !");
+            };
+            // MouseInformation
+
+            this.MouseInformation = function () {
+                // alert(" Luu y : Trang thai cua chuột : true = live & flase = die");
+                document.write(" Name La : " + this.Name + '<br>');
+                document.write(" Trọng lượng của chuột la : " + this.mouseweight + "Kg" + '<br>');
+                document.write(" Tốc độ la : " + this.MouseSpeed + "s" + '<br>');
+                document.write(" Trạng thái của chuột la : " + this.mouselife + '<br>');
+            };
+
+            // eatMouse
+            this.getmouselife = function () {
+                this.mouselife = this.mouselife - 1;
+                return this.mouselife;
+            };
+
+            this.GetMouseSpeed = function () {
+                return this.MouseSpeed;
+            };
+
+        };
+        var Cat = function (namecat, catweight, catspeed, Mouse) {
+            //Thuoc tinh.
+            this.NameCat = namecat;
+            this.Catweight = catweight;
+            this.CatSpeed = catspeed;
+            this.setMouse = Mouse;
+
+
+            //CatInformation
+            this.CatInformation = function () {
+                document.write(" Name La : " + this.NameCat + '<br>');
+                document.write(" Trọng lượng của mèo la : " + this.Catweight + "Kg" + '<br>');
+                document.write(" Trạng thái của mèo la : " + this.CatSpeed + "s" + '<br>');
+            };
+            // Cat said
+            this.CatSaid = function () {
+                alert("  Mèo  Keu : meomeo!");
+            };
+
+            // An thit Mouse
+            this.EatMouse = function () {
+                if (this.setMouse.getmouselife() > 0) {
+                    this.Catweight = this.Catweight + 1;
+                    return " Đã ăn một con chuột và cân nặng của mèo hiện tại là : " + this.Catweight;
+                } else {
+                    return 'Ko';
+                }
+            }
+            //san mouse
+            this.CatchMouse = function () {
+                if (this.CatSpeed > this.setMouse.GetMouseSpeed()) {
+                    alert('Bạn đã bắt được 01 con chuột! bắt lại đi nha.')
+                }
+            }
+        };
+
+        //Mouse Said.
+        var mouse = new Mouse("Mouse", 100, 100, 100);
+        var cat = new Cat("Cat", 100, 200, mouse);
+
+        function main() {
+            mouse.MouseSaid();
+        }
+
+        function main2() {
+            cat.CatSaid();
+        }
+
+        function main3() {
+            mouse.MouseInformation();
+        }
+
+        function main4() {
+            cat.CatInformation();
+        }
+
+        function main5() {
+            var a = alert(cat.EatMouse());
+        }
+
+        function main6() {
+            cat.CatchMouse();
+
+        }
+
+
+    </script>
+    <p> Phát triển ứng dụng mô phỏng lại quá trình mèo bắt chuột và ăn chuột.</p>
+    <p>
+        <button type="button" onclick="main4()" style="
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;">Thông tin về mèo</button>
+
+        <button type="button" onclick="main2()" style="
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;"> Mèo kêu </button>
+
+        <button type="button" onclick="main5()" style="
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;">Ăn Chuột</button>
+
+        <button type="button" onclick="main6()" style="
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;">Bắt chuột</button>
+    </p>
+
+    <p>
+        <button type="button" onclick="main3()" style="
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;"> Thông tin chuột</button>
+
+        <button type="button" onclick="main()" style="
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;"> chuotkeu </button>
+    </p>
+
+
+</body>
+
+</html>

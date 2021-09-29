@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #Show {
+            width: 100%;
+            height: auto;
+            float: left;
+        }
+
+        #CatShow {
+            width: 30%;
+            float: left;
+        }
+
+        #MouseShow {
+            width: 70%;
+            float: left;
+        }
+
+        #MouseShow1 {
+            width: 50%;
+            float: left;
+        }
+
+        #MouseShow2 {
+            width: 50%;
+            float: left;
+        }
+
+        #MouseShow3 {
+            width: 50%;
+            float: left;
+        }
+
+        #MouseShow4 {
+            width: 50%;
+            float: left;
+        }
+        #toPlay{
+            width: 80%;
+            margin: 0 auto;
+           
+        }
+        #toPlay p{
+            font-size: 20px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 align="center"> Thông tin của mèo,chuột và cách chơi</h1>
+    <div id="Show">
+        <div id="CatShow">
+            <button type="button" onclick="checkCat()" style="
+                cursor: pointer;
+                background-color: #4CAF50;
+                color: white;
+                padding: 12px 20px;
+                border: none;
+                border-radius: 4px;
+                margin-left: 75px;">Thông tin về mèo Tom</button>
+
+            <p id="checkCatName"></p>
+            <p id="checkCatWeight"></p>
+            <p id="checkCatSpeed"></p>
+        </div>
+        <div id="MouseShow">
+            <div id="MouseShow1">
+                <button type="button" onclick="checkMouse1()" style="
+                cursor: pointer;
+                background-color: #4CAF50;
+                color: white;
+                padding: 12px 20px;
+                border: none;
+                border-radius: 4px;
+                margin-left: 75px;">Thông tin về chuột Jerry</button>
+
+                <p id="checkMouseName"></p>
+                <p id="checkMouseWeight"></p>
+                <p id="checkMouseSpeed"></p>
+                <p id="checkMouseLife"></p>
+            </div>
+            <div id="MouseShow2">
+                <button type="button" onclick="checkMouse2()" style="
+                cursor: pointer;
+                background-color: #4CAF50;
+                color: white;
+                padding: 12px 20px;
+                border: none;
+                border-radius: 4px;
+                margin-left: 75px;">Thông tin về chuột Donald</button>
+
+                <p id="checkMouseName2"></p>
+                <p id="checkMouseWeight2"></p>
+                <p id="checkMouseSpeed2"></p>
+                <p id="checkMouseLife2"></p>
+            </div>
+            <div id="MouseShow3">
+                <button type="button" onclick="checkMouse3()" style="
+                cursor: pointer;
+                background-color: #4CAF50;
+                color: white;
+                padding: 12px 20px;
+                border: none;
+                border-radius: 4px;
+                margin-left: 75px;">Thông tin về chuột Peter</button>
+
+                <p id="checkMouseName3"></p>
+                <p id="checkMouseWeight3"></p>
+                <p id="checkMouseSpeed3"></p>
+                <p id="checkMouseLife3"></p>
+            </div>
+            <div id="MouseShow4">
+                <button type="button" onclick="checkMouse4()" style="
+                cursor: pointer;
+                background-color: #4CAF50;
+                color: white;
+                padding: 12px 20px;
+                border: none;
+                border-radius: 4px;
+                margin-left: 75px;">Thông tin về chuột Aba</button>
+
+                <p id="checkMouseName4"></p>
+                <p id="checkMouseWeight4"></p>
+                <p id="checkMouseSpeed4"></p>
+                <p id="checkMouseLife4"></p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div id="toPlay">
+        <button type="button" onclick="Play()" style="
+                cursor: pointer;
+                background-color: #4CAF50;
+                color: white;
+                padding: 12px 20px;
+                border: none;
+                border-radius: 4px;
+                margin-left: 270px;">Cách chơi</button>
+         <p id="Play1"></p>
+         <p id="Play2"></p>
+         <p id="Play3"></p>
+         <p id="Play4"></p>
+         <p id="Play5"></p>
+    </div>
+    <hr>
+    <div id="back">
+        <button type="button" onclick="location.href='../huongdoituong/baitap3.html'" style="
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            margin-left: 70px;
+            margin-top: 50px;">Trở về </button>
+    </div>
+    <script src="../huongdoituong/baitap3.js"></script>
+</body>
+
+</html>
