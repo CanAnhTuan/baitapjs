@@ -6,55 +6,189 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../huongdoituong/showTT.html">
+    <link href="../huongdoituong/Catch_and_Eat.html">
     <title>Document</title>
     <style>
-        #main {
+        #main1 {
             height: auto;
-            width: 100%;
+            width: 20%;
             float: left;
         }
 
         #TT_Show {
-            width: 25%;
+            margin-bottom: 30px;
             float: left;
         }
 
         #catchMouse {
-            width: 25%;
+            margin-bottom: 30px;
             float: left;
 
         }
 
-        #EathMouse {
-            width: 25%;
+        #Eat_Mouse {
+            margin-bottom: 30px;
             float: left;
 
         }
 
-        #MouseShow {
-            width: 25%;
-            float: left;
-
-        }
-
-        #ArrestedMouse {
-            width: 25%;
+        #Show_Catch_Mouse {
+            margin-bottom: 30px;
             float: left;
         }
 
         #game {
-            margin-top: 30px;
-            width: 100%;
-            height: 500px;
+            /* margin-top: 30px; */
+            width: 79%;
+            height: 650px;
             border: solid 1px blue;
             float: left;
+        }
+
+        #Cat_play {
+            width: 29.4%;
+            height: 501px;
+            float: left;
+            border: solid 1px blue;
+        }
+
+        #Cat_play h2 {
+            text-align: center;
+            color: teal;
+            font-size: 40px;
+            font-weight: 700;
+        }
+
+        #Mouse_Play1 {
+            width: 35%;
+            height: 250px;
+            float: left;
+            border: solid 1px blue;
+        }
+
+        #Mouse_Play2 {
+            width: 35.02%;
+            height: 250px;
+            float: left;
+            border: solid 1px blue;
+        }
+
+        #Mouse_Play3 {
+            width: 35%;
+            height: 249px;
+            float: left;
+            border: solid 1px blue;
+        }
+
+        #Mouse_Play4 {
+            width: 35.02%;
+            height: 249px;
+            float: left;
+            border: solid 1px blue;
+        }
+
+        #Cat_play img {
+            width: 170px;
+            margin: 20px 90px;
+        }
+
+        #Mouse_Play2 img {
+            width: 118px;
+            margin: 10px 100px 20px 140px;
+        }
+
+        #Mouse_Play1 img {
+            width: 110px;
+            margin-left: 140px;
+            margin-bottom: 10px
+        }
+
+        #Mouse_Play3 img {
+            width: 150px;
+            margin-bottom: 20px;
+            margin-left: 140px;
+        }
+
+        #Mouse_Play4 img {
+            width: 100px;
+            margin-bottom: 20px;
+            margin-left: 150px;
+        }
+
+        #InKetqua {
+            width: 100%;
+            height: 147px;
+            float: left;
+            border: solid 1px blue;
+        }
+
+        h3 {
+            text-align: center;
+            margin: 0 0 10px 0;
+            color: teal;
+        }
+
+        #Ketqua {
+            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+
+
+        #main2{
+            width: 20%;
+            float: left;
+            margin-top: 20px;
+        }
+        #Show_Catch_Mouse {
+            margin-bottom: 20px;
+            float: left;
+          
+        }
+        #Back{
+            margin-bottom: 20px;
+            float: left;
+        }
+        #Show {
+            margin-top: 20px;
+            width: 79%;
+            float: right;
+            margin-right: 10px;
+            height: 250px;
+            border: 1px solid blue;
+        }
+        #Show1{
+            width: 70%;
+            float: left;
+            height: 50px;
+        }
+        #Show2{
+            width: 70%;
+            float: left;
+            height: 50px;
+        }
+        #Show3{
+            width: 30%;
+            float: left;
+            height: 50px;
+        }
+        #Show4{
+            width: 30%;
+            height: 50px;
+            float: left;
+        }
+        #Show h3{
+            font-size: 20px;
+
+            font-weight: 600;
         }
     </style>
 </head>
 
 <body>
     <h1 align="center"> Phát triển ứng dụng mô phỏng lại quá trình mèo bắt chuột và ăn chuột</h1>
-    <div id="main">
+    <div id="main1">
         <div id="TT_Show">
             <button type="button" onclick="location.href='../huongdoituong/showTT.html'" style="
             cursor: pointer;
@@ -63,41 +197,108 @@
             padding: 12px 20px;
             border: none;
             border-radius: 4px;
-            margin-left: 70px;">Thông tin chung</button>
+           
+            width: 200px;">Thông tin chung</button>
         </div>
-        <div id="catchMouse">
-            <button type="button" onclick="eatMouse()" style="
-            cursor: pointer;
-            background-color: #4CAF50;
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 4px;
-            margin-left: 95px;">Bắt Chuột</button>
+        <div id="Show_Catch_Mouse">
+            <button type="button" onclick="Show_Catch_Mouse()" id="Show_Catch_Mouse1" style="
+                cursor: pointer;
+                background-color: #4CAF50;
+                color: white;
+                padding: 15px 20px;
+                width: 200px;
+                border: none;
+                border-radius: 4px;
+               " disabled>Số chuột đã bắt được</button>
         </div>
-        <div id="EathMouse">
-            <button type="button" onclick="eatMouse()" style="
-            cursor: pointer;
-            background-color: #4CAF50;
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 4px;
-            margin-left: 95px;">Ăn Chuột</button>
-        </div>
-        <div id="EathMouse">
-            <button type="button" onclick="eatMouse()" style="
-            cursor: pointer;
-            background-color: #4CAF50;
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 4px;
-            margin-left: 80px;">Số Chuột đã bắt</button>
-        </div>
+       
     </div>
     <div id="game">
+        <div id="Cat_play">
+            <img src="../huongdoituong/tom.png" alt="">
+            <h2>Tom</h2>
+        </div>
+        <div id="Mouse_Play1">
+            <img src="../huongdoituong/Jerry_Mouse.png" alt="">
+            <h3>Jerry</h3>
+            <button type="button" onclick="Catch_Mouse1()" id="Mouse_play_1" style="
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            margin-left: 150px;
+            border: none;
+            border-radius: 4px;">Bắt Chuột</button>
 
+        </div>
+        <div id="Mouse_Play2">
+            <img src="../huongdoituong/Pichu.png" alt="">
+            <h3>Pichu</h3>
+            <button type="button" onclick="Catch_Mouse2()" id="Mouse_play_2" style="
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            margin-left: 150px;
+            border: none;
+            border-radius: 4px;">Bắt Chuột</button>
+        </div>
+        <div id="Mouse_Play3">
+            <img src="../huongdoituong/pikachu.png" alt="">
+            <h3>Pikachu</h3>
+            <button type="button" onclick="Catch_Mouse3()" id="Mouse_play_3" style="
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            margin-left: 150px;
+            border: none;
+            border-radius: 4px;">Bắt Chuột</button>
+        </div>
+        <div id="Mouse_Play4">
+            <img src="../huongdoituong/hamste.jpg" alt="">
+            <h3>Hamste</h3>
+            <button type="button" onclick="Catch_Mouse4()" id="Mouse_play_4" style="
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            margin-left: 150px;
+            border: none;
+            border-radius: 4px;">Bắt Chuột</button>
+        </div>
+        <div id="InKetqua">
+            <h2 align="center">Kết Quả</h2>
+            <div id="Ketqua"></div>
+        </div>
+    </div>
+    
+    <div id="Show" align="center">
+        <h3>Tên chuột</h3>
+        <div id="Show1"></div>
+        <div id="Show3">
+            <button type="button" onclick="Eat_Mouse1()" id="Eat_Mouse1" style="
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            margin-left: 150px;
+            border: none;
+            border-radius: 4px;" disabled>Ăn Chuột</button>
+        </div>
+        <div id="Show2"></div>
+        <div id="Show4">
+            <button type="button" onclick="Eat_Mouse2()" id="Eat_Mouse2" style="
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            margin-left: 150px;
+            border: none;
+            border-radius: 4px;" disabled>Ăn Chuột</button>
+        </div>
+        <div id="Show6"></div>
+        <div id="Show6"></div>
     </div>
     <!-- <script src="../huongdoituong/pikachu.png"></script> -->
     <script src="../huongdoituong/baitap3.js"></script>
