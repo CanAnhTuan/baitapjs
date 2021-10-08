@@ -15,7 +15,7 @@ function Mouse_Show_1() {
 };
 var getMouse_2 = {
     //Thuoc Tinh.
-    Id: 2,
+    Id: 8,
     MouseName: "Pichu ",
     MouseWeight: 20,
     MouseSpeed: 10,
@@ -107,11 +107,12 @@ const x =[];
 function Catch_Mouse2() {
     const a = this.getMouse_2.Id;
     y.push(a);
-    console.log(y)
+    // console.log(y)
     if (this.getCat.CatSpeed > this.getMouse_2.MouseSpeed) {
         document.getElementById('Ketqua').innerHTML = (" bắt đc 1 con chuột đó là " + this.getMouse_2.MouseName);
         document.getElementById("Mouse_play_2").disabled = true;
         document.querySelector('#Mouse_play_2').style.background = "gray";
+        document.getElementById("Show_Catch_Mouse1").disabled = false;
     }
     else if (this.getMouse_2.MouseLife == false) {
         document.querySelector('#Ketqua').innerHTML = ("chuột này hiện đã chết không thể bắt");
@@ -125,8 +126,8 @@ function Catch_Mouse2() {
 };
 function Catch_Mouse3() {
     const b = this.getMouse_3.Id;
-    x.push(b);
-    console.log(x)
+    y.push(b);
+    // console.log(y)
     if (this.getCat.CatSpeed > this.getMouse_3.MouseSpeed) {
         document.querySelector('#Ketqua').innerHTML = (" bắt đc 1 con chuột đó là " + this.getMouse_3.MouseName);
         document.getElementById("Mouse_play_3").disabled = true;
@@ -160,24 +161,28 @@ function Catch_Mouse4() {
     }
 };
 function Show_Catch_Mouse() {
-     if(y.includes(2) == true){
-        document.querySelector('#Show1').innerHTML = this.getMouse_2.MouseName;
-        document.getElementById("Eat_Mouse1").disabled = false;
+    console.log(y);
+    for (let i = 0; i < y.length; i++) {
+        const element = y[i];
+        if (element == 8) {
+            document.querySelector('#Show1').innerHTML = this.getMouse_2.MouseName;
+            document.getElementById("Eat_Mouse1").disabled = false;
+        }
+        else if (element == 3) {
+            document.querySelector('#Show2').innerHTML = this.getMouse_3.MouseName;
+            document.getElementById("Eat_Mouse2").disabled = false;
+        }
+        else if (element == 8 && element == 3) {
+            document.querySelector('#Show1').innerHTML = this.getMouse_2.MouseName;
+            document.querySelector('#Show2').innerHTML = this.getMouse_3.MouseName;
+            document.getElementById("Eat_Mouse2").disabled = false;
+            document.getElementById("Eat_Mouse1").disabled = false;
+        }
+        else    {
+                document.querySelector('#Show1').innerHTML = ('không có con chuột nào');
+            }
+        console.log(element);
     }
-    else if(x.includes(3) == true){
-        document.querySelector('#Show2').innerHTML = this.getMouse_3.MouseName;
-        document.getElementById("Eat_Mouse2").disabled = false;
-    }
-    else if (y.includes(2) == true && x.includes(3) == true) {
-        document.querySelector('#Show1').innerHTML = this.getMouse_2.MouseName;
-        document.querySelector('#Show2').innerHTML = this.getMouse_3.MouseName;
-        document.getElementById("Eat_Mouse2").disabled = false;
-        document.getElementById("Eat_Mouse1").disabled = false;
-    }
-    else if (y.includes(2) == false && x.includes(3) == false)  {
-        document.querySelector('#Show6').innerHTML = ('không có con chuột nào');
-    }
-
 }
 function Play() {
     document.querySelector('#Show_Name').innerHTML = ("- Mèo Tom sẽ đi bắt một trong bốn chú chuột mà bạn chỉ định.");
